@@ -9,7 +9,7 @@ app.get('/', (req, res) => {
 
 app.get('/api', (req, res) => {
     var url = req.query.url;
-    const data = y2.GetVideo(url).then(response => {
+    y2.GetVideo(url).then(response => {
         res.json(response)
     });
 
